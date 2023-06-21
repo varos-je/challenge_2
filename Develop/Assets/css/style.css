@@ -213,7 +213,7 @@ footer h2, h4 {
 }
 
 /*media queries for mobile responsiveness*/
-@media (max-width: 960px) {
+@media (max-width: 955px) {
   #main-container {
       flex-direction: column;
   }

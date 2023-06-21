@@ -1,3 +1,5 @@
+# HELP: unable to display css properties
+
 # Challenge 2 - Advanced CSS Challenge: Professional Portfolio
 ### by James Varos 
 ### [Github Repo](https://github.com/varos-je/challenge_2)

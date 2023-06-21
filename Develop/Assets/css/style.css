@@ -1,0 +1,229 @@
+/* universal selector and :root pseudo-element - can be overridden*/
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*header nav items scrolls to matching page section*/
+html {
+  scroll-behavior: smooth;
+}
+
+:root{
+  --main-color: black;
+  --charcoal: #264653ff;
+  --persian-green: #2a9d8fff;
+  --saffron: #e9c46aff;
+  --sandy-brown: #f4a261ff;
+  --burnt-sienna: #e76f51ff;
+  --borders: var(--charcoal);
+  --sidebar-width: 7%;
+  --left-width: 25%;
+  --right-width: 68%;
+}
+
+/* sidebar */
+#sidebar {
+  background-color: var(--charcoal);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100%;
+}
+
+/* header nav bar */
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--saffron); 
+  border: 2px var(--borders);
+  padding: 10px 25px;
+  box-sizing: border-box;
+}
+
+header h1 {
+  color: var(--charcoal);
+  margin: 0;
+}
+
+/* creates space b/w the two h1 elements */
+header h1:first-child {
+  margin-right: 10px; 
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  text-decoration: underline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--charcoal);
+}
+
+/* ensures content does not go behind the sidebar */
+/* margin-left equal to #sidebar width */
+header, main, footer, #profile-pic {
+  margin-left: var(--sidebar-width);
+}
+
+/* container for profile pic */
+#profile-pic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 25px 25px;
+}
+
+/*containers, attributes for 'about me', 'work' sections w/in <main> */ 
+#about-me-anchor, #work-anchor, #contact-anchor {
+  position: absolute;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+}
+
+.left-main-container {
+  width: var(--left-width);
+  padding: 10px 10px; 
+  border: 20px var(--borders);
+  border-style: double;
+}
+
+.left-main-container h2 {
+  color: var(--charcoal);
+  text-decoration: underline;
+  text-align: center;
+  font-weight: 700;
+}
+
+.right-main-container {
+  width: var(--right-width);
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px; 
+  border: 20px var(--borders);
+  border-style: double;
+}
+
+.right-main-container p {
+  text-align: center;
+  font-weight: 600;
+  padding:10px;
+}
+
+#big-card {
+  width: 94%; 
+  margin-bottom: 2%;
+  position: relative;
+  margin: 10px 10px;
+  color: var(--charcoal);
+  background-color: var(--saffron);
+  border: 10px var(--charcoal);
+  border-style: solid;
+}
+
+.card {
+  width: 47%; 
+  margin-bottom: 2%;
+  position: relative;
+  margin: 10px 10px;
+  color: var(--charcoal);
+  background-color: var(--saffron);
+  border: 10px var(--charcoal);
+  border-style: solid;
+}
+
+#big-card img {
+  display: block;
+  position: relative;
+  align-items: center;
+  margin: 5px 5px;
+  max-height: 500px;
+}
+
+.card img {
+  display: block;
+  position: relative;
+  align-items:center;
+  margin:5px 5px;
+  max-height: 300px;
+}
+
+.card h3, #big-card h3 {
+  text-decoration: underline;
+  position: relative;
+  padding: 10px 10px;
+  margin:5px 5px;
+  color:var(--charcoal);
+}
+
+.card-photo {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.card h3 {
+  position: relative;
+  color:var(--charcoal);
+  padding: 10px 10px;
+  margin: 5px 5px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--saffron); 
+  border: 2px var(--borders);
+  height: 100px;
+  padding: 10px 25px;
+  box-sizing: border-box;
+}
+
+footer h2, h4 {
+  color: var(--charcoal);
+  margin: 0;
+}
+
+/*media queries for mobile responsiveness*/
+@media (max-width: 960px) {
+  #main-container {
+      flex-direction: column;
+  }
+
+  #left-main-container, #right-main-container {
+      width: 100%;
+  }
+
+  .card {
+      width: 100%;
+  }
+}
+

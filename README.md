@@ -1,6 +1,7 @@
 # Challenge 2 - Advanced CSS Challenge: Professional Portfolio
 ### by James Varos 
 ### [Github Repo](https://github.com/varos-je/challenge_2)
+### Deployed page: 
 
 ## Description
 The following project is a web application for a personal portfolio that displays my previous work and projects. 
